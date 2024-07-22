@@ -1,30 +1,23 @@
 "use client";
-import { useState, useEffect } from "react";
-// import { createSessionWithEthWallet, mintPKP, newlyMintedPKP, fetchMintedPKPs, mintCapacityCreditsNFT, delegateCapacityCreditsNFT,
-//     addAuthMethod, seeAuthMethods, uploadLitActionToIPFS, executeLitAction, authenticateWithGoogle, createSession,
-//     getGoogleAuthMethod,
-//  } from "../utils3";
 
+import { useState } from "react";
 import {
     mintPKPUsingEthWallet,
     transferPKPToItself,
     fundPKP,
     addAnotherAuthToPKP,
     RemoveInitialAuthMethod,
+    mintPKPUsingEthWallet2,
     addAnotherAuthToPKP2,
-    seeAuthMethods,
     removeInitialAuth2,
+    seeAuthMethods,
 } from "../utils";
 
 export default function Home() {
     const [ethAddress, setEthAddress] = useState("");
 
-    // useEffect(() => {
-    //     setEthAddress(newlyMintedPKP?.ethAddress);
-    // }, [ethAddress]);
-
     async function mintPKPCall() {
-        const pkp = await mintPKPUsingEthWallet();
+        const pkp = await mintPKPUsingEthWallet2();
         setEthAddress(pkp?.ethAddress);
     }
 
@@ -57,18 +50,6 @@ export default function Home() {
                 <button onClick={uploadLitActionToIPFS}>Upload Lit Action to IPFS</button>
                 
                 <button onClick={executeLitAction}>Execute Lit Action</button> */}
-
-                {/*  */}
-
-                {/* <button onClick={mintPKPUsingEthWallet}>Mint PKP with First Auth</button>
-
-                <button onClick={transferPKPToItself}>Transfer To Itself</button>
-
-                <button onClick={fundPKP}>Fund PKP</button>
-
-                <button onClick={addAnotherAuthToPKP}>Add Second Auth</button>
-
-                <button onClick={RemoveInitialAuthMethod}>Remove First Auth</button> */}
 
                 {/*  */}
 

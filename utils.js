@@ -29,13 +29,16 @@ const litNodeClient = new LitNodeClient({
 
 const litAuthClient = new LitAuthClient({
     litRelayConfig: {
-        relayApiKey: "r46thg1w-l9r4-s2na-9j5c-ikg5v2sfv2p8_anshtest",
+        relayApiKey: process.env.NEXT_PUBLIC_RELAYER_URL,
     },
     litNodeClient,
     debug: true,
 });
 
 export let newlyMintedPKP = {}
+
+
+// helper functions --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 async function uploadLitActionToIPFS(litActionCode) {
     const ipfsHash = await ipfsHelpers.stringToCidV0(litActionCode);
@@ -66,7 +69,6 @@ async function getAnotherWallet() {
     return wallet;
 }
 
-
 export async function seeAuthMethods() {
     console.log("started..");
 
@@ -83,6 +85,8 @@ export async function seeAuthMethods() {
     console.log(authMethods);
 }
 
+
+// 1st approach --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // current user mints a new pkp
 export async function mintPKPUsingEthWallet() {
@@ -126,83 +130,6 @@ export async function mintPKPUsingEthWallet() {
 
     return mintedPkp.pkp;
 }
-
-export async function addAnotherAuthToPKP2() {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const ethersSigner = provider.getSigner();
-
-    const litContractsSignerA = new LitContracts({
-        signer: ethersSigner,
-        network: LitNetwork.DatilDev,
-        debug: false,
-    });
-
-    await litContractsSignerA.connect();
-
-    const ipfsCID = await uploadLitActionToIPFS(litActionB);
-    const bytesCID = await stringToBytes(ipfsCID);
-
-    const addAuthMethodBReceipt =
-        await litContractsSignerA.pkpPermissionsContract.write.addPermittedAction(
-            newlyMintedPKP.tokenId,
-            bytesCID,
-            [AuthMethodScope.SignAnything]
-            // {
-            //     gasPrice: "1",
-            //     gasLimit: 250_000,
-            // }
-        );
-
-    await addAuthMethodBReceipt.wait();
-
-    const isPermittedB =
-        await litContractsSignerA.pkpPermissionsContract.read.isPermittedAction(
-            newlyMintedPKP.tokenId,
-            bytesCID
-        );
-
-    console.log("isPermittedB: ", isPermittedB);
-}
-
-export async function removeInitialAuth2() {
-    // const provider = new ethers.providers.Web3Provider(window.ethereum);
-    // const ethersSigner = provider.getSigner();
-    const anotherAuthWallet = await getAnotherWallet();
-
-    const litContractsSignerB = new LitContracts({
-        signer: anotherAuthWallet,
-        network: LitNetwork.DatilDev,
-        debug: false,
-    });
-
-    await litContractsSignerB.connect();
-
-    const ipfsCID = await uploadLitActionToIPFS(litActionA);
-    const bytesCID = await stringToBytes(ipfsCID);
- 
-    const removeAuthMethodAReceipt =
-        await litContractsSignerB.pkpPermissionsContract.write.removePermittedAction(
-            newlyMintedPKP.tokenId,
-            bytesCID,
-        );
-
-    await removeAuthMethodAReceipt.wait();
-
-    const isPermittedA =
-        await litContractsSignerB.pkpPermissionsContract.read.isPermittedAction(
-            newlyMintedPKP.tokenId,
-            bytesCID
-        );
-
-    console.log("isPermittedA: ", isPermittedA);
-
-
-}
-
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 // pkp is now owner of itself
 export async function transferPKPToItself() {
@@ -266,7 +193,6 @@ export async function addAnotherAuthToPKP() {
     await litNodeClient.connect();
 
     const ipfsCID_A = await uploadLitActionToIPFS(litActionA);
-    const bytesCID_A = await stringToBytes(ipfsCID_A);
 
     const pkpSessionSigsA = await litNodeClient.getLitActionSessionSigs({
         pkpPublicKey: newlyMintedPKP.publicKey,
@@ -280,11 +206,11 @@ export async function addAnotherAuthToPKP() {
                 ability: LitAbility.LitActionExecution,
             },
         ],
-        litActionIpfsId: ipfsCID,
+        litActionIpfsId: ipfsCID_A,
         jsParams: {
             authSig: JSON.stringify(
                 await generateAuthSig({
-                    signer: bytesCID_A,
+                    signer: ethersSigner,
                     // @ts-ignore
                     toSign: await createSiweMessageWithRecaps({
                         uri: "http://localhost",
@@ -301,12 +227,9 @@ export async function addAnotherAuthToPKP() {
     });
 
     const pkpEthersWalletA = new PKPWallet({
+        litNodeClient,
         pkpPubKey: newlyMintedPKP.publicKey,
-        controllerAuthSig: pkpSessionSigsA,
-        provider: "https://vesuvius-rpc.litprotocol.com"
-        // litNodeClient,
-        // pkpPubKey: newlyMintedPKP.publicKey,
-        // controllerSessionSigs: pkpSessionSigsA,
+        controllerSessionSigs: pkpSessionSigsA,
     });
 
     await pkpEthersWalletA.init();
@@ -340,7 +263,7 @@ export async function addAnotherAuthToPKP() {
     const isPermittedB =
         await litContractsPkpSignerA.pkpPermissionsContract.read.isPermittedAction(
             newlyMintedPKP.tokenId,
-            bytesCID
+            bytesCID_B
         );
 
     console.log("isPermittedB: ", isPermittedB);
@@ -350,6 +273,9 @@ export async function addAnotherAuthToPKP() {
 // removePermittedAction is called with litActionA by PKPEthersWallet
 export async function RemoveInitialAuthMethod() {
     const anotherAuthWallet = await getAnotherWallet();
+
+    const ipfsCID_B = await uploadLitActionToIPFS(litActionB);
+    const bytesCID_B = await stringToBytes(ipfsCID_B);
 
     const pkpSessionSigsB = await litNodeClient.getLitActionSessionSigs({
         pkpPublicKey: newlyMintedPKP.publicKey,
@@ -363,7 +289,7 @@ export async function RemoveInitialAuthMethod() {
                 ability: LitAbility.LitActionExecution,
             },
         ],
-        litActionIpfsId: LIT_ACTION_CHECK_ADDRESS_B,
+        litActionIpfsId: ipfsCID_B,
         jsParams: {
             authSig: JSON.stringify(
                 await generateAuthSig({
@@ -403,7 +329,7 @@ export async function RemoveInitialAuthMethod() {
     const removeAuthMethodAReceipt =
         await litContractsPkpSignerB.pkpPermissionsContract.write.removePermittedAction(
             newlyMintedPKP.tokenId,
-            LIT_ACTION_A_IPFS_CID_BYTES,
+            bytesCID_B,
             {
                 gasPrice: await ethersSignerA.provider.getGasPrice(),
                 gasLimit: 100_000,
@@ -415,7 +341,119 @@ export async function RemoveInitialAuthMethod() {
     isPermittedA =
         await pkpEthersWalletB.pkpPermissionsContract.read.isPermittedAction(
             newlyMintedPKP.tokenId,
-            LIT_ACTION_A_IPFS_CID_BYTES
+            bytesCID_B
+        );
+
+    console.log("isPermittedA: ", isPermittedA);
+}
+
+// 2nd approach --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// current user mints a new pkp
+export async function mintPKPUsingEthWallet2() {
+    console.log("started..");
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const ethersSigner = provider.getSigner();
+
+    const litContracts = new LitContracts({
+        signer: ethersSigner,
+        network: LitNetwork.DatilDev,
+        debug: false,
+        rpc: `https://vesuvius-rpc.litprotocol.com`,
+    });
+
+    await litContracts.connect();
+
+    const mintedPkp = await litContracts.pkpNftContractUtils.write.mint();
+
+    console.log("Minted PKP NFT: ", mintedPkp.pkp);
+
+    newlyMintedPKP = mintedPkp.pkp;
+
+    const ipfsCID = await uploadLitActionToIPFS(litActionA);
+
+    const addAuthMethodAReceipt = await litContracts.addPermittedAction({
+        pkpTokenId: mintedPkp.pkp.tokenId,
+        ipfsId: ipfsCID,
+        authMethodScopes: [AuthMethodScope.SignAnything],
+    });
+
+    console.log("addAuthMethodAReceipt: ", addAuthMethodAReceipt);
+
+    const bytesCID = await stringToBytes(ipfsCID);
+
+    let isPermittedA =
+        await litContracts.pkpPermissionsContract.read.isPermittedAction(
+            mintedPkp.tokenId,
+            bytesCID
+        );
+
+    console.log("isPermittedA: ", isPermittedA);
+
+    return mintedPkp.pkp;
+}
+
+// current user adds a new auth method to pkp
+export async function addAnotherAuthToPKP2() {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const ethersSigner = provider.getSigner();
+
+    const litContractsSignerA = new LitContracts({
+        signer: ethersSigner,
+        network: LitNetwork.DatilDev,
+        debug: false,
+    });
+
+    await litContractsSignerA.connect();
+
+    const ipfsCID = await uploadLitActionToIPFS(litActionB);
+    const bytesCID = await stringToBytes(ipfsCID);
+
+    const addAuthMethodBReceipt =
+        await litContractsSignerA.pkpPermissionsContract.write.addPermittedAction(
+            newlyMintedPKP.tokenId,
+            bytesCID,
+            [AuthMethodScope.SignAnything]
+        );
+
+    await addAuthMethodBReceipt.wait();
+
+    const isPermittedB =
+        await litContractsSignerA.pkpPermissionsContract.read.isPermittedAction(
+            newlyMintedPKP.tokenId,
+            bytesCID
+        );
+
+    console.log("isPermittedB: ", isPermittedB);
+}
+
+// another auth user attempts remove initial auth method
+export async function removeInitialAuth2() {
+    const anotherAuthWallet = await getAnotherWallet();
+
+    const litContractsSignerB = new LitContracts({
+        signer: anotherAuthWallet,
+        network: LitNetwork.DatilDev,
+        debug: false,
+    });
+
+    await litContractsSignerB.connect();
+
+    const ipfsCID = await uploadLitActionToIPFS(litActionA);
+    const bytesCID = await stringToBytes(ipfsCID);
+ 
+    const removeAuthMethodAReceipt =
+        await litContractsSignerB.pkpPermissionsContract.write.removePermittedAction(
+            newlyMintedPKP.tokenId,
+            bytesCID,
+        );
+
+    await removeAuthMethodAReceipt.wait();
+
+    const isPermittedA =
+        await litContractsSignerB.pkpPermissionsContract.read.isPermittedAction(
+            newlyMintedPKP.tokenId,
+            bytesCID
         );
 
     console.log("isPermittedA: ", isPermittedA);
