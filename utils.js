@@ -7,6 +7,7 @@ import {
     AuthMethodType,
     AuthMethodScope,
     LitNetwork,
+    LIT_RPC
 } from "@lit-protocol/constants";
 import {
     LitActionResource,
@@ -24,12 +25,12 @@ const litNodeClient = new LitNodeClient({
     alertWhenUnauthorized: false,
     litNetwork: "datil-dev",
     debug: true,
-    rpcUrl: `https://vesuvius-rpc.litprotocol.com`,
+    rpcUrl: LIT_RPC.CHRONICLE_YELLOWSTONE,
 });
 
 const litAuthClient = new LitAuthClient({
     litRelayConfig: {
-        relayApiKey: process.env.NEXT_PUBLIC_RELAYER_URL,
+        relayApiKey: "api key",
     },
     litNodeClient,
     debug: true,

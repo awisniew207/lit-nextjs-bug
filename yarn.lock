@@ -530,6 +530,29 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
+"@lit-protocol/access-control-conditions@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/access-control-conditions/-/access-control-conditions-6.2.2.tgz"
+  integrity sha512-0Dh+2wPCmA20Y7cqw4DMSh/WkhPIzkID80VaLkTxg4agdaQfwD8DtnTD1awiMpzTB2bH49OT6nMcwMlYjjbD5Q==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    ajv "^8.12.0"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
 "@lit-protocol/accs-schemas@0.0.7":
   version "0.0.7"
   resolved "https://registry.npmjs.org/@lit-protocol/accs-schemas/-/accs-schemas-0.0.7.tgz"
@@ -562,6 +585,31 @@
     tslib "1.14.1"
     uint8arrays "^4.0.3"
 
+"@lit-protocol/auth-browser@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/auth-browser/-/auth-browser-6.2.2.tgz"
+  integrity sha512-AIDzPid7ZWFG7J3Q3Phx7wOobYVWGCULQ2481heKqIWU0fj+12OgPUipW07xw5HGJ5/55H9EZjE/s+XkZmlRbw==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/bytes" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@ethersproject/strings" "5.7.0"
+    "@ethersproject/wallet" "5.7.0"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/misc-browser" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    ajv "^8.12.0"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    punycode "2.3.1"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+
 "@lit-protocol/auth-helpers@^6.1.1", "@lit-protocol/auth-helpers@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/auth-helpers/-/auth-helpers-6.2.1.tgz"
@@ -587,6 +635,31 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
+"@lit-protocol/auth-helpers@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/auth-helpers/-/auth-helpers-6.2.2.tgz"
+  integrity sha512-ml7ZgxZ7uuf8eqAmtnw91eUy1rPSzl223I8r90oLVt8M0xXqyrY3wmIir6xqg2xpx5SBk4D18SWuUeylQn6hwQ==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@lit-protocol/access-control-conditions" "6.2.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    ajv "^8.12.0"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    siwe-recap "0.0.2-alpha.0"
+    tslib "2.6.0"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
 "@lit-protocol/bls-sdk@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/bls-sdk/-/bls-sdk-6.2.1.tgz"
@@ -594,6 +667,27 @@
   dependencies:
     tslib "1.14.1"
     util "0.12.5"
+
+"@lit-protocol/bls-sdk@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/bls-sdk/-/bls-sdk-6.2.2.tgz"
+  integrity sha512-xWUrV4e1YL8eWHnPUbN8FJeVCIXQGB/7D+jnLC3WpxTitL3Zw+Hwjc32sWGP3guQKsgonv86tAmMyZ3yfyBL2w==
+  dependencies:
+    tslib "1.14.1"
+    util "0.12.5"
+
+"@lit-protocol/constants@^6.2.2", "@lit-protocol/constants@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/constants/-/constants-6.2.2.tgz"
+  integrity sha512-8eJsptwPDq2K5hFPwFG7n8H//9IcaxknZGkgBU7tnbAD9BxgMWOJYZnyC58uNGSC4zm68aX6h0sesfzB4wLYqg==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/types" "6.2.2"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
 
 "@lit-protocol/constants@6.2.1":
   version "6.2.1"
@@ -625,6 +719,35 @@
     "@lit-protocol/logger" "6.2.1"
     "@lit-protocol/misc" "6.2.1"
     "@lit-protocol/types" "6.2.1"
+    ajv "^8.12.0"
+    bitcoinjs-lib "^6.1.0"
+    ethers "^5.7.1"
+    jose "^4.14.4"
+    jszip "^3.10.1"
+    process "0.11.10"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
+"@lit-protocol/contracts-sdk@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/contracts-sdk/-/contracts-sdk-6.2.2.tgz"
+  integrity sha512-pmPEqlQ7q+oPFvPe2iLfro8NWw3cwLnkcPprY/gTxMqD85iYgcOLctOnUKiBM2hja019Kp+Ux6LSuJ4myj2apQ==
+  dependencies:
+    "@cosmjs/amino" "0.30.1"
+    "@cosmjs/crypto" "0.30.1"
+    "@cosmjs/encoding" "0.30.1"
+    "@ethersproject/abi" "5.7.0"
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
     ajv "^8.12.0"
     bitcoinjs-lib "^6.1.0"
     ethers "^5.7.1"
@@ -679,6 +802,48 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
+"@lit-protocol/core@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/core/-/core-6.2.2.tgz"
+  integrity sha512-ncUOuS5nv5k72wjSmC19uM1SO3QQduqxCnmZ765stGbWUaG/QvKxdGup2TjkSyMEdUrRQkUhUiljibM/EPRF8g==
+  dependencies:
+    "@cosmjs/amino" "0.30.1"
+    "@cosmjs/crypto" "0.30.1"
+    "@cosmjs/encoding" "0.30.1"
+    "@ethersproject/abi" "5.7.0"
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@lit-protocol/access-control-conditions" "6.2.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/bls-sdk" "6.2.2"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/contracts-sdk" "6.2.2"
+    "@lit-protocol/crypto" "6.2.2"
+    "@lit-protocol/ecdsa-sdk" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/nacl" "6.2.2"
+    "@lit-protocol/sev-snp-utils-sdk" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    ajv "^8.12.0"
+    bitcoinjs-lib "^6.1.0"
+    bs58 "^5.0.0"
+    cross-fetch "3.1.4"
+    date-and-time "^2.4.1"
+    ethers "^5.7.1"
+    jose "^4.14.4"
+    jszip "^3.10.1"
+    multiformats "^9.7.1"
+    pako "1.0.11"
+    process "0.11.10"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
 "@lit-protocol/crypto@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/crypto/-/crypto-6.2.1.tgz"
@@ -708,10 +873,47 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
+"@lit-protocol/crypto@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/crypto/-/crypto-6.2.2.tgz"
+  integrity sha512-9Gf/Gv0Smz4yuaw5ViVT7vFzzdl6XGIovnil/yNql+IMX+1thekalT8py1w+bPF7PAQpy7ikmWQUmCLyuVuKMA==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/bls-sdk" "6.2.2"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/ecdsa-sdk" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/nacl" "6.2.2"
+    "@lit-protocol/sev-snp-utils-sdk" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    ajv "^8.12.0"
+    cross-fetch "3.1.4"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    pako "1.0.11"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
 "@lit-protocol/ecdsa-sdk@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/ecdsa-sdk/-/ecdsa-sdk-6.2.1.tgz"
   integrity sha512-J6wLmyNUnxn9/lXsU2tZxGH5Iqm9aI+jSPS1pkMoai/TapW12op1gCb98dFfTnaFh8aOorSjr6mXxOXpc/BE7w==
+  dependencies:
+    tslib "1.14.1"
+    util "0.12.5"
+
+"@lit-protocol/ecdsa-sdk@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/ecdsa-sdk/-/ecdsa-sdk-6.2.2.tgz"
+  integrity sha512-bdkK7l3qjDYDCLXqj+cKm0fx8k1xfWR7mWF0dqAQoAb0ZNDfGntIG8BZQWi9ZaqQknm9/cNMqVTNAh/nCOc/dw==
   dependencies:
     tslib "1.14.1"
     util "0.12.5"
@@ -746,10 +948,40 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
-"@lit-protocol/lit-auth-client@^6.1.1":
-  version "6.2.1"
-  resolved "https://registry.npmjs.org/@lit-protocol/lit-auth-client/-/lit-auth-client-6.2.1.tgz"
-  integrity sha512-Tijatno2UGsn32/vJpTJTjEvg8ASPQweww4AiCOuNkh2WEXhKDZxKaI9IxuNzz/p37r7egwMrWB1Sj1yjKKrlA==
+"@lit-protocol/encryption@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/encryption/-/encryption-6.2.2.tgz"
+  integrity sha512-mYc0KzNQhMmm7CZL6sYjvyjqcycEamcIz6TUrntZF3bLqRmXND+rl7CMGWgiHKrrb4hgVjGURDVWdKEZzpL1hQ==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/bls-sdk" "6.2.2"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/crypto" "6.2.2"
+    "@lit-protocol/ecdsa-sdk" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/nacl" "6.2.2"
+    "@lit-protocol/sev-snp-utils-sdk" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    ajv "^8.12.0"
+    cross-fetch "3.1.4"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    pako "1.0.11"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
+"@lit-protocol/lit-auth-client@^6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/lit-auth-client/-/lit-auth-client-6.2.2.tgz"
+  integrity sha512-wbufM21VzPB/PCEu+mURNSkB8U9l3XjnubAfV7b265WgDQvuIaz00whaeDVRHWnBkuzJCPFN8EPJXaUJ68dmeQ==
   dependencies:
     "@cosmjs/amino" "0.30.1"
     "@cosmjs/crypto" "0.30.1"
@@ -762,26 +994,26 @@
     "@ethersproject/strings" "5.7.0"
     "@ethersproject/transactions" "5.7.0"
     "@ethersproject/wallet" "5.7.0"
-    "@lit-protocol/access-control-conditions" "6.2.1"
+    "@lit-protocol/access-control-conditions" "6.2.2"
     "@lit-protocol/accs-schemas" "0.0.7"
-    "@lit-protocol/auth-browser" "6.2.1"
-    "@lit-protocol/auth-helpers" "6.2.1"
-    "@lit-protocol/bls-sdk" "6.2.1"
-    "@lit-protocol/constants" "6.2.1"
-    "@lit-protocol/contracts-sdk" "6.2.1"
-    "@lit-protocol/core" "6.2.1"
-    "@lit-protocol/crypto" "6.2.1"
-    "@lit-protocol/ecdsa-sdk" "6.2.1"
-    "@lit-protocol/encryption" "6.2.1"
-    "@lit-protocol/lit-node-client" "6.2.1"
-    "@lit-protocol/lit-node-client-nodejs" "6.2.1"
-    "@lit-protocol/logger" "6.2.1"
-    "@lit-protocol/misc" "6.2.1"
-    "@lit-protocol/misc-browser" "6.2.1"
-    "@lit-protocol/nacl" "6.2.1"
-    "@lit-protocol/sev-snp-utils-sdk" "6.2.1"
-    "@lit-protocol/types" "6.2.1"
-    "@lit-protocol/uint8arrays" "6.2.1"
+    "@lit-protocol/auth-browser" "6.2.2"
+    "@lit-protocol/auth-helpers" "6.2.2"
+    "@lit-protocol/bls-sdk" "6.2.2"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/contracts-sdk" "6.2.2"
+    "@lit-protocol/core" "6.2.2"
+    "@lit-protocol/crypto" "6.2.2"
+    "@lit-protocol/ecdsa-sdk" "6.2.2"
+    "@lit-protocol/encryption" "6.2.2"
+    "@lit-protocol/lit-node-client" "6.2.2"
+    "@lit-protocol/lit-node-client-nodejs" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/misc-browser" "6.2.2"
+    "@lit-protocol/nacl" "6.2.2"
+    "@lit-protocol/sev-snp-utils-sdk" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
     "@walletconnect/ethereum-provider" "2.9.2"
     "@walletconnect/modal" "2.6.1"
     ajv "^8.12.0"
@@ -854,7 +1086,111 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
-"@lit-protocol/lit-node-client@^6.1.1", "@lit-protocol/lit-node-client@6.2.1":
+"@lit-protocol/lit-node-client-nodejs@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/lit-node-client-nodejs/-/lit-node-client-nodejs-6.2.2.tgz"
+  integrity sha512-R+7dMjUYmylEALeT64X9TKPbSNANXA08oHRWcnrV9RKAWukVOv9tlsARhFC+5MMuJ8npVx9KfkEDF37mCIaSHA==
+  dependencies:
+    "@cosmjs/amino" "0.30.1"
+    "@cosmjs/crypto" "0.30.1"
+    "@cosmjs/encoding" "0.30.1"
+    "@ethersproject/abi" "5.7.0"
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@ethersproject/transactions" "5.7.0"
+    "@lit-protocol/access-control-conditions" "6.2.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/auth-helpers" "6.2.2"
+    "@lit-protocol/bls-sdk" "6.2.2"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/contracts-sdk" "6.2.2"
+    "@lit-protocol/core" "6.2.2"
+    "@lit-protocol/crypto" "6.2.2"
+    "@lit-protocol/ecdsa-sdk" "6.2.2"
+    "@lit-protocol/encryption" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/misc-browser" "6.2.2"
+    "@lit-protocol/nacl" "6.2.2"
+    "@lit-protocol/sev-snp-utils-sdk" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    ajv "^8.12.0"
+    bitcoinjs-lib "^6.1.0"
+    bs58 "^5.0.0"
+    cross-fetch "3.1.4"
+    date-and-time "^2.4.1"
+    ethers "^5.7.1"
+    jose "^4.14.4"
+    jszip "^3.10.1"
+    multiformats "^9.7.1"
+    pako "1.0.11"
+    process "0.11.10"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    siwe-recap "0.0.2-alpha.0"
+    tslib "^2.3.0"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
+"@lit-protocol/lit-node-client@^6.2.2", "@lit-protocol/lit-node-client@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/lit-node-client/-/lit-node-client-6.2.2.tgz"
+  integrity sha512-kXwKt39FHDQpiTuVWdOaDOuC4xySYzNR2SI0u/T2QZ8zzPRnNjy6y1S0oQzZZLKUPUTNtIHP5OaR4JYSYDYnpg==
+  dependencies:
+    "@cosmjs/amino" "0.30.1"
+    "@cosmjs/crypto" "0.30.1"
+    "@cosmjs/encoding" "0.30.1"
+    "@ethersproject/abi" "5.7.0"
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/bytes" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@ethersproject/strings" "5.7.0"
+    "@ethersproject/transactions" "5.7.0"
+    "@ethersproject/wallet" "5.7.0"
+    "@lit-protocol/access-control-conditions" "6.2.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/auth-browser" "6.2.2"
+    "@lit-protocol/auth-helpers" "6.2.2"
+    "@lit-protocol/bls-sdk" "6.2.2"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/contracts-sdk" "6.2.2"
+    "@lit-protocol/core" "6.2.2"
+    "@lit-protocol/crypto" "6.2.2"
+    "@lit-protocol/ecdsa-sdk" "6.2.2"
+    "@lit-protocol/encryption" "6.2.2"
+    "@lit-protocol/lit-node-client-nodejs" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/misc" "6.2.2"
+    "@lit-protocol/misc-browser" "6.2.2"
+    "@lit-protocol/nacl" "6.2.2"
+    "@lit-protocol/sev-snp-utils-sdk" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
+    "@walletconnect/ethereum-provider" "2.9.2"
+    "@walletconnect/modal" "2.6.1"
+    ajv "^8.12.0"
+    bitcoinjs-lib "^6.1.0"
+    bs58 "^5.0.0"
+    cross-fetch "3.1.4"
+    date-and-time "^2.4.1"
+    ethers "^5.7.1"
+    jose "^4.14.4"
+    jszip "^3.10.1"
+    multiformats "^9.7.1"
+    pako "1.0.11"
+    process "0.11.10"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    siwe-recap "0.0.2-alpha.0"
+    tweetnacl "^1.0.3"
+    tweetnacl-util "^0.15.1"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
+"@lit-protocol/lit-node-client@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/lit-node-client/-/lit-node-client-6.2.1.tgz"
   integrity sha512-ITU3xHCV6FvHtJR+b1smiXkUB5WDneJRqOdIgkiRBg5iqdp7wz8UljeXZ+SIER4BYBxagtOkjV/Twp0rQE567A==
@@ -926,6 +1262,22 @@
     tslib "1.14.1"
     uint8arrays "^4.0.3"
 
+"@lit-protocol/logger@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/logger/-/logger-6.2.2.tgz"
+  integrity sha512-KjVDScCK4z+K6OgssLfd1LoMJF5NHP0pVfRpV46M6PTN9N4vockdxr/6NT3DPbl5CLoV7E4iFi625d6Ue7o+iw==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+
 "@lit-protocol/misc-browser@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/misc-browser/-/misc-browser-6.2.1.tgz"
@@ -936,6 +1288,21 @@
     "@lit-protocol/constants" "6.2.1"
     "@lit-protocol/types" "6.2.1"
     "@lit-protocol/uint8arrays" "6.2.1"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+
+"@lit-protocol/misc-browser@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/misc-browser/-/misc-browser-6.2.2.tgz"
+  integrity sha512-lqtDgF1+cOb3E1Baj8Aej1grrRd5Z+yWSgrwJNRqnJ42CoCATzKbPI9rD1c5WPI95j43fCzNqu9PVQiepwk9bw==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    "@lit-protocol/uint8arrays" "6.2.2"
     ethers "^5.7.1"
     jszip "^3.10.1"
     siwe "^2.0.5"
@@ -962,10 +1329,38 @@
     uint8arrays "^4.0.3"
     util "0.12.5"
 
+"@lit-protocol/misc@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/misc/-/misc-6.2.2.tgz"
+  integrity sha512-1d0Z6j7gHxiTYrOHFIX1L6cegb21M7f7k7z9Tib/nwHK00F5z4XgKn9tdYviR48jL+0qIa4nji4QJVgBq9RMvw==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@ethersproject/contracts" "5.7.0"
+    "@ethersproject/providers" "5.7.2"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    "@lit-protocol/constants" "6.2.2"
+    "@lit-protocol/logger" "6.2.2"
+    "@lit-protocol/types" "6.2.2"
+    ajv "^8.12.0"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    punycode "2.3.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+    uint8arrays "^4.0.3"
+    util "0.12.5"
+
 "@lit-protocol/nacl@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/nacl/-/nacl-6.2.1.tgz"
   integrity sha512-6iqW9guqJhgnrDrl0Hiq1IOen1Lx5q6vKm1fER7dSdT94KEET+lCEHR0opixKMWGjqG9YUpgLAzv1gJIH7Qn9g==
+  dependencies:
+    tslib "1.14.1"
+
+"@lit-protocol/nacl@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/nacl/-/nacl-6.2.2.tgz"
+  integrity sha512-LQ9NUL7xcocjx7CMvZcDyJvl3mYxMFD46RkB6kOS55o5kKQ4V9pPms1BTY9JUULcAEyBVmfcjLgAdzWjGSlqbQ==
   dependencies:
     tslib "1.14.1"
 
@@ -1107,6 +1502,14 @@
     cross-fetch "3.1.4"
     tslib "1.14.1"
 
+"@lit-protocol/sev-snp-utils-sdk@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/sev-snp-utils-sdk/-/sev-snp-utils-sdk-6.2.2.tgz"
+  integrity sha512-sWS/3/jMUQS7jMWRbhOnpg5pX8if5tdaOy6suBxpCEvlZjPYeOCRrp3yLPgg1lIVa0VtxvQxbexRPbvnmhaYuQ==
+  dependencies:
+    cross-fetch "3.1.4"
+    tslib "1.14.1"
+
 "@lit-protocol/types@^6.1.1", "@lit-protocol/types@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/types/-/types-6.2.1.tgz"
@@ -1119,10 +1522,34 @@
     siwe "^2.0.5"
     tslib "1.14.1"
 
+"@lit-protocol/types@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/types/-/types-6.2.2.tgz"
+  integrity sha512-lTfH1x7ubjATBD2vAsx/Y7QF83FDeNS3pzxwTE2MtBZ20ME23kknIfCx+UYbgWq+XUju7HBK395ZunYFABzfaA==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+
 "@lit-protocol/uint8arrays@6.2.1":
   version "6.2.1"
   resolved "https://registry.npmjs.org/@lit-protocol/uint8arrays/-/uint8arrays-6.2.1.tgz"
   integrity sha512-PUph3oVVP4WOgWPSizcwlaFzaZY5wmAI+nqorWcipxF7esgOFpTe0ZPF/7WKLmVtw2dUEgOmNTz2YMSmFKXO9w==
+  dependencies:
+    "@ethersproject/abstract-provider" "5.7.0"
+    "@lit-protocol/accs-schemas" "0.0.7"
+    ethers "^5.7.1"
+    jszip "^3.10.1"
+    siwe "^2.0.5"
+    tslib "1.14.1"
+
+"@lit-protocol/uint8arrays@6.2.2":
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/@lit-protocol/uint8arrays/-/uint8arrays-6.2.2.tgz"
+  integrity sha512-6586myPmKoz70A9/tO6grXOdzm5UnCEwrMQe5kqKbOJuVg70PJhbmGNUVXzKptmfXL6Rc5jwQOgDWlBjtXBZTg==
   dependencies:
     "@ethersproject/abstract-provider" "5.7.0"
     "@lit-protocol/accs-schemas" "0.0.7"
@@ -1231,10 +1658,10 @@
   dependencies:
     glob "10.3.10"
 
-"@next/swc-darwin-arm64@14.2.4":
+"@next/swc-win32-x64-msvc@14.2.4":
   version "14.2.4"
-  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.4.tgz"
-  integrity sha512-AH3mO4JlFUqsYcwFUHb1wAKlebHU/Hv2u2kb1pAuRanDZ7pD/A/KPD98RHZmwsJpdHQwfEc/06mgpSzwrJYnNg==
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.4.tgz"
+  integrity sha512-tkLrjBzqFTP8DVrAAQmZelEahfR9OxWpFR++vAI9FBhCiIxtwHwBHC23SBHCTURBtwB4kc/x44imVOnkKGNVGg==
 
 "@noble/curves@~1.4.0", "@noble/curves@1.4.2":
   version "1.4.2"
@@ -1284,11 +1711,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@parcel/watcher-darwin-arm64@2.4.1":
-  version "2.4.1"
-  resolved "https://registry.npmjs.org/@parcel/watcher-darwin-arm64/-/watcher-darwin-arm64-2.4.1.tgz"
-  integrity sha512-ln41eihm5YXIY043vBrrHfn94SIBlqOWmoROhsMVTSXGh0QahKGy77tfEywQ7v3NywyxBBkGIfrWRHm0hsKtzA==
-
 "@parcel/watcher-wasm@^2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@parcel/watcher-wasm/-/watcher-wasm-2.4.1.tgz"
@@ -1297,6 +1719,11 @@
     is-glob "^4.0.3"
     micromatch "^4.0.5"
     napi-wasm "^1.1.0"
+
+"@parcel/watcher-win32-x64@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.npmjs.org/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.4.1.tgz"
+  integrity sha512-+DvS92F9ezicfswqrvIRM2njcYJbd5mb9CUgtrHCHmvn7pPPa+nMDRu1o1bYYz/l5IB2NVGNJWiH7h1E58IF2A==
 
 "@parcel/watcher@^2.4.1":
   version "2.4.1"
@@ -3192,11 +3619,6 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
-
-fsevents@~2.3.2:
-  version "2.3.3"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
-  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.2:
   version "1.1.2"
